@@ -1,0 +1,78 @@
+{
+    "apiVersion": "policy.karmada.io/v1alpha1",
+    "items": [
+      {
+        "apiVersion": "policy.karmada.io/v1alpha1",
+        "kind": "OverridePolicy",
+        "metadata": {
+          "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"policy.karmada.io/v1alpha1\",\"kind\":\"OverridePolicy\",\"metadata\":{\"annotations\":{},\"name\":\"example-override\",\"namespace\":\"default\"},\"spec\":{\"overrideRules\":[{\"overriders\":{\"plaintext\":[{\"operator\":\"add\",\"path\":\"/spec/values\",\"value\":{\"replicaCount\":2}}]},\"targetCluster\":{\"clusterNames\":[\"member1\"]}}],\"resourceSelectors\":[{\"apiVersion\":\"helm.toolkit.fluxcd.io/v2beta1\",\"kind\":\"HelmRelease\",\"name\":\"podinfo\"}]}}\n"
+          },
+          "creationTimestamp": "2022-08-31T23:55:21Z",
+          "generation": 1,
+          "managedFields": [
+            {
+              "apiVersion": "policy.karmada.io/v1alpha1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": {
+                "f:metadata": {
+                  "f:annotations": {
+                    ".": {},
+                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                  }
+                },
+                "f:spec": {
+                  ".": {},
+                  "f:overrideRules": {},
+                  "f:resourceSelectors": {}
+                }
+              },
+              "manager": "kubectl-client-side-apply",
+              "operation": "Update",
+              "time": "2022-08-31T23:55:21Z"
+            }
+          ],
+          "name": "example-override",
+          "namespace": "default",
+          "resourceVersion": "259250",
+          "uid": "b46eb799-b904-481f-ad89-9164344e3acb"
+        },
+        "spec": {
+          "overrideRules": [
+            {
+              "overriders": {
+                "plaintext": [
+                  {
+                    "operator": "add",
+                    "path": "/spec/values",
+                    "value": {
+                      "replicaCount": 2
+                    }
+                  }
+                ]
+              },
+              "targetCluster": {
+                "clusterNames": [
+                  "member1"
+                ]
+              }
+            }
+          ],
+          "overriders": {},
+          "resourceSelectors": [
+            {
+              "apiVersion": "helm.toolkit.fluxcd.io/v2beta1",
+              "kind": "HelmRelease",
+              "name": "podinfo",
+              "namespace": "default"
+            }
+          ]
+        }
+      }
+    ],
+    "kind": "OverridePolicyList",
+    "metadata": {
+      "continue": "",
+      "resourceVersion": "260173"
+    }
+  }
